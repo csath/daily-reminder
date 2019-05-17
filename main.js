@@ -1,6 +1,6 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow} = require('electron')
-
+const {app, BrowserWindow, Menu, ipcMain, Tray} = require('electron')
+var path = require('path')
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
@@ -8,8 +8,10 @@ let mainWindow
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 600,
+    height: 700,
+    backgroundColor: '#2e2c29',
+    icon: __dirname + '/assets/logo.icns',
     webPreferences: {
       nodeIntegration: true
     }
@@ -48,5 +50,34 @@ app.on('activate', function () {
   if (mainWindow === null) createWindow()
 })
 
+
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+
+// ipcMain.on('put-in-tray', function (event) {
+  
+//   const iconPath = ''
+//   appIcon = new Tray(iconPath)
+//   const contextMenu = Menu.buildFromTemplate([{
+//     label: 'Open Drink!',
+//     click: function () {
+//       event.sender.send('tray-open')
+//     }
+//   },{
+//     label: 'Pause',
+//     click: function () {
+//       event.sender.send('tray-pause')
+//     }
+//   },
+//   {
+//     label: 'Exit',
+//     click: function () {
+//       event.sender.send('tray-exit')
+//     }
+//   }])
+
+//   appIcon.setToolTip('Electron Demo in the tray.')
+//   appIcon.setContextMenu(contextMenu)
+// })
+
+

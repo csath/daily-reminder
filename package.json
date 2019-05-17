@@ -1,12 +1,12 @@
 {
-  "name": "electron-quick-start",
+  "name": "daily-reminder",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "An application which reminds you your daily work",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/csath/todo-reminder",
   "keywords": [
     "Electron",
     "quick",
@@ -14,9 +14,13 @@
     "tutorial",
     "demo"
   ],
-  "author": "GitHub",
+  "author": "csath - chanakaathurugiriya@gmail.com",
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^5.0.0"
+  },
+  "dependencies": {
+    "electron-json-storage": "^4.1.6",
+    "uuid": "^3.3.2"
   }
 }
